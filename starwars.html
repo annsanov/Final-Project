@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Final Project - ANNISA NOVIANTI</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="css/style2.css" rel="stylesheet">
+    <script async="" src="js/script.js" type="text/javascript"></script>
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/axios.js"></script>
+
+</head>
+
+<body>
+   
+ <!-- ##### Header Area Start ##### -->
+ <header class="header-area">
+    
+        <!-- Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Breaking News Area -->
+                    <div class="col-12 col-sm-8">
+                        <div class="breaking-news-area">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Assalamualaikum</a></li>
+                                    <li><a href="#">Hello Welcome!</a></li>
+                            </div>
+                        </div>
+                    </div>
+            <div class="logo-area text-center">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <h1>Data of Star Wars with API!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="original-nav-area" id="stickyNav">
+                <div class="classy-nav-container breakpoint-off">
+                    <div class="container">
+     <!-- Nav Start -->
+     <div class="classynav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="data.html">Star Wars</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+    </div>
+    </div>
+</div>
+</header>
+<body>
+        <body> 
+                <section class="container">
+                    
+                <div class="columns">
+                    <div id="content">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Classification</th>
+                                <th>Designation</th>
+                                <th>Average Height</th>
+                                <th>Skin Colors</th>
+                                <th>Hair Colors</th>
+                                <th>Eye Colors</th>
+                                <th>Edited</th>
+                                <th>Language</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabel">
+            
+                        </tbody>
+                        <script>
+                            var apiSwapi = "https://swapi.co/api/species/   ";
+            
+                            function getData() {
+                                return axios.get(apiSwapi)
+                                    .then(response => {
+                                        return response.data;
+                                        console.log('Data ditemukan');
+                                    })
+                                    .catch(function (error) {
+                                        console.log('Data tidak ditemukan');
+                                    })
+                            }
+            
+            
+                            getData().then(data => {
+                                data.results.forEach(li => {
+                                    document.querySelector('#tabel').insertAdjacentHTML('beforeend',
+                                        '<td>' + li.name + '</td>' +
+                                        '<td>' + li.classification + '</td>' +
+                                        '<td>' + li.designation + '</td>' +
+                                        '<td>' + li.average_height + '</td>' +
+                                        '<td>' + li.skin_colors + '</td>' +
+                                        '<td>' + li.hair_colors + '</td>' +
+                                        '<td>' + li.eye_colors + '</td>' +
+                                        '<td>' + li.edited + '</td>' +
+                                        '<td>' + li.language + '</td>')
+                                });
+                            })
+                        </script>
+                    </table>
+                </section>
+</body>
+<footer class="footer-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+<!-- Footer Social Area -->
+<div class="footer-social-area mt-30">
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    </div>
+</div>
+</div>
+</div>
+
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> | By Annisa Novianti
+
+</footer>
+
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="js/plugins.js"></script>
+<!-- Active js -->
+<script src="js/active.js"></script>
+
+</body>
+
+</html>
