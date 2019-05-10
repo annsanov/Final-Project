@@ -17,23 +17,35 @@
             </div>
         </div>
     <!-- Message Modal -->
-    <div class="subscribe-newsletter-area">
-            <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <div class="modal-body">
-                            <h5 class="title">Drop Your Words</h5>
-                            <form action="https://formspree.io/novianti.19@gmail.com" class="newsletterForm" method="post">
-                                <input type="email" name="email" placeholder="Your e-mail here">
-                                <input type="text" name="text" placeholder="Anything to say?">
-                                <button type="submit" class="btn original-btn">Send</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open Info
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">INFO</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          This is a part of modal. Cant say anything.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+</div>
        
     
         <!-- ##### Header Area Start ##### -->
